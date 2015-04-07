@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-#ruby=ruby-1.9.3-p484
+#ruby=ruby-2.1.2
 #ruby-gemset=tocticket-web
 gem 'rails', '3.2.13'
 gem 'pg'
@@ -51,11 +51,14 @@ group :test, :development do
   gem 'capybara'
   gem 'guard-rspec'
   gem "factory_girl_rails"
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'pry-remote'
+  gem 'pry-nav'
 end
 group :test do
   gem "email_spec"
   gem "cucumber-rails", :require => false
   gem "database_cleaner"
   gem "launchy"
-  gem "capybara"
 end

@@ -166,6 +166,7 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
+    interception (0.5)
     journey (1.0.4)
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
@@ -248,6 +249,16 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.4.5)
@@ -379,6 +390,10 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-twitter
   pg
+  pry-nav
+  pry-rails
+  pry-remote
+  pry-rescue
   quiet_assets
   railroady
   rails (= 3.2.13)

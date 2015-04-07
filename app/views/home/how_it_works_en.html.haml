@@ -1,0 +1,151 @@
+.row
+  .span3.bs-docs-sidebar
+    %ul#navbar.nav.nav-list.bs-docs-sidenav.affix{style: "margin-top: 150px"}
+      %li
+        = link_to "#crear" do
+          %i.icon-chevron-right
+          Event creation
+      %li
+        = link_to "#venta" do
+          %i.icon-chevron-right
+          Ticket sell
+      %li
+        = link_to "#acceso" do
+          %i.icon-chevron-right
+          Access control
+  .span9
+    %p{style: "margin-top: 50px"}
+      Tocticket is a distributed ticket selling System, which offers to Event Organizers the following services:
+    %ol
+      %li Create and publish events: with our web application.
+      %li Ticket selling: through Paypal (and credit cards) from web app or in event door.
+      %li Access control: with an Android device scanning QR code.
+    %p This software have English and Spanish locales.
+
+    %h1#crear Event creation (as Organizer)
+    %p At this point we describe the posibilities which Organizer have at this point
+
+    %h2 Organizer sign up
+    %p In order to create events we have to sign up in web app: #{link_to "http://demo.tocticket.com"}
+    = image_tag "shots_en/01-alta.png"
+    %p We have created a test account: organizer@tocticket.com / please
+    %p This account can be edited int the top menu option. Here you can:
+    %ol
+      %li Edit: name, email and password
+      %li Cancel account
+    = image_tag "shots_en/02-edit-account.png"
+
+    %h2 Event creation
+    %p We can create the event in the main page:
+    = image_tag "shots_en/03-new-event.png"
+    %p The creation form defines the following attributes:
+    %ol
+      %li Event name
+      %li Event date
+      %li Event place
+      %li Standard ticket price (later we could create more ticket types)
+      %li Maxium number of attendees with standard ticket
+    = image_tag "shots_en/04-event-form.png"
+    %p At this point we have the event 'Landing page', we can link our marketing actions to this page, as this is the point where the client can purchase event tickets:
+    = image_tag "shots_en/05-landing-page.png"
+
+    %h2 Event management
+    %p In the list of Events we can manage our events: Edit attributes, and cancel events, and see how is going the tickets selling.
+    = image_tag "shots_en/06-event-list.png"
+    %p We can acces to Edition, canelation and event detail. Clicking over the desired event we can see the event details:
+    %ul
+      %li Event public details
+      %li See howmany ticket we have sold in real time
+      %li Sell ticket: which can be really useful at the event door. In order to account how many tickets are sold, print ticjet, or check access.
+      %li Graphs which show us the sell state of the event.
+    = image_tag "shots_en/13-event-management.png"
+    %p Clicking the "Sell Entries" button, the Organizer can sell tickets directly in the event door.
+
+    %h2 Graphics tab
+    %p In the Event page we can see the Graphics tab.
+    %p We have developed the followint graphs:
+    %ul
+      %li Ticket meter: total money from sold tickets, compared with the target incomes at the end of the needle path.
+      %li Bars: illustration total number of different types sold.
+      %li Temporal: Tickets sold distributed in a time axis
+    = image_tag "shots_en/20-graficas1.png"
+
+    %h2 Edit Event (advanced attributes)
+    %p In the edit Event button (both pages: Event list and show Event), we can modify the properties of each Event.
+    %p Basic data:
+    %ul
+      %li Event name
+      %li Date and time for the event celebration
+      %li Event address
+      %li Aditional info for the event
+    = image_tag "shots_en/21-editar-basico.png"
+    %p Prices:
+    %ul
+      %li Create new types of ticket: Standard, VIP, Second tier.... With price and attendee maximum number for each type
+      %li Paypal account: where can be charges the money of each ticket
+      %li Image with the distribuition of the local, and where are placed the different types of ticket
+    = image_tag "shots_en/22-editar-precios.png"
+    %p Aditional information:
+    %ul
+      %li Personalized URL for the event
+      %li Aditional URL for the event
+    = image_tag "shots_en/23-editar-info.png"
+    %p Customized attributes: here we can add the fields to fill by the attendee on each ticket purchase. They can be text, image or check box
+    = image_tag "shots_en/24-editar-campos.png"
+
+
+    %h1#venta Ticket selling (Atendee)
+    %p Here we can see the point of view of the client who sell the tickets (Atendee)
+    %p From the Event landing page, which the user knows from a marketing action:
+    = image_tag "shots_en/05-landing-page.png"
+    %p Atendee access to the selling form where we define:
+    %ul
+      %li Ticket number
+      %li Ticket type: Standard, VIP,...
+      %li Email to receive the purchase confirmation
+      %li Required customizable fields defined by Organizer: photo, address, National ID ...
+    = image_tag "shots_en/07-ticket-form.png"
+
+    %h2 Payment
+    %p Here we access to Paypal page. We can pay with Paypal and credit card.
+    = image_tag "shots_en/08-paypal-payment.png"
+    %p We can pay with a fake account create to test the application:
+    = image_tag "shots_en/09-paypal-fake-account.png"
+    %p Finally the entries are paid:
+    = image_tag "shots_en/10-paypal-pay-now.png"
+
+    %h2 Print and communication
+    %p Once the bill is paid two accions are executed:
+    %ul
+      %li Tocticket server checks the ticket as paid.
+      %li And eamil is sent to the atendee with the purchase confirmation and the link to his ticket
+    = image_tag "shots_en/11-paypal-verification-mail.png"
+    %p The following page verifies that the paiment is done to the Paypal Organicer account (organizer@tocticket.com):
+    = image_tag "shots_en/14-paypal-payment-done.png"
+    %p Once we back to the page, the ticket with QR code is:
+    = image_tag "shots_en/12-ticket.png"
+
+
+    %h1#acceso Access Control (Organizer) -- Experimental!!
+    %p Here we can define how the Organizer user can use the Android app for in-door access control
+
+    %h2 Installation
+    %p The app needs:
+    %ul
+      %li Android 2.1 or above.
+      %li Network connection (mobile or Wifi)
+    %p Search for Tocticket app in the "Play Store":
+    = image_tag "shots_en/19-market.png"
+    %p You can run it in the Installed apps menu:
+    = image_tag "shots_en/20-inicio.png"
+
+    %h2 Check a ticket
+    %p Open the app and login with the Organizer account:
+    = image_tag "shots_en/15-login.png"
+    %p After that the event list screen is opened (you can have more tha one open Event in your Organization at the same time)
+    = image_tag "shots_en/16-events.png"
+    %p Click on the Event to access control and scan QR codes:
+    = image_tag "shots_en/17-scanner.png"
+    %p Once the code is decrypted, the app send it to server to verify it. Returning all user data to verify identity in-door.
+    = image_tag "shots_en/18-ticket-valid.png"
+    %p Once the ticket is verified the server check it as used. If ticket was used or there was an error the screen warns. The door operator can scan again clicking the button.
