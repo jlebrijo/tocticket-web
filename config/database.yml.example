@@ -1,7 +1,7 @@
 common: &common
   adapter: postgresql
   username: pg_user
-  password: 12@tr% # from psql setup, see Postgresql
+  password: password # from psql setup, see Postgresql
 
 development:
   <<: *common
