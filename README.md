@@ -12,7 +12,7 @@ Test users:
 
 * Attendee user: attendee@tocticket.com/please
 * Organizer user: organizer@tocticket.com/please
-* Admin user: admin@tocticket.com/please through http://demo.tocticket.com/admin
+* Admin user: admin@tocticket.com/please through http://tocticket.lebrijo.com/admin
 
 ## Run local
 

@@ -11,7 +11,6 @@ group :assets do
 end
 gem 'jquery-rails', "~> 2.3.0"
 gem 'jquery-ui-rails'
-gem "thin", ">= 1.5.0"
 gem "haml", ">= 3.1.7"
 
 gem "bootstrap-sass", "2.3.2.2"
@@ -25,15 +24,16 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "therubyracer", ">= 0.10.2", :group => :assets, :platform => :ruby
 gem 'activeadmin'
-gem "capistrano"
-gem "rvm-capistrano"
-gem "whenever"
+
 # Images uploading
 gem "rmagick"     # sudo apt-get update
                   # sudo apt-get install libmagickwand-dev
 gem "carrierwave"
 
-gem "lebops", github: "jlebrijo/lebops"
+
+gem "whenever"
+gem "thin", ">= 1.5.0"
+gem "prun-ops"
 
 group :development do
   gem 'better_errors'

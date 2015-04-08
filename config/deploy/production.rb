@@ -1,0 +1,1 @@
+server "tocticket.lebrijo.com", user: 'root', roles: %w{web app db}, port: 2222
