@@ -1,5 +1,5 @@
 set :application, 'tocticket'
-set :repo_url,  "git@github.com:jlebrijo/tocticket-web.git"
+set :repo_url,  "git@bitbucket.org:lebrijo/tocticket-web.git"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
